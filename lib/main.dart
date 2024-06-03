@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ig/Pages/login.dart';
+import 'package:ig/components/chattile.dart';
 import 'package:ig/components/homeAppBar.dart';
 import 'package:ig/components/storywidget.dart';
 
@@ -45,6 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return storyIcon();
+    return LoginView();
   }
 }
