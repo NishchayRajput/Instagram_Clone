@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ig/Pages/login.dart';
 import 'package:ig/components/chattile.dart';
 import 'package:ig/components/homeAppBar.dart';
+import 'package:ig/components/post.dart';
 import 'package:ig/components/storywidget.dart';
 
 void main() {
@@ -47,6 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return LoginView();
+    return post();
   }
 }
