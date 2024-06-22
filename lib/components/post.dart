@@ -1,8 +1,4 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ig/components/storywidget.dart';
 
 class post extends StatefulWidget {
   const post({super.key});
@@ -14,37 +10,65 @@ class post extends StatefulWidget {
 class _postState extends State<post> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar : AppBar(
-        title : const Text('Post'),
-      ),
-        body: Container(
-          child: Column(
-            // spacing: 1,
-            children: [
-              ListTile(
-                style: ListTileStyle.drawer,
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage('./lib/images/Nishchay.jpg'),
-          radius: 20,
-                ),
-                title: const Text('Nishchay', style: TextStyle(fontSize:13, fontWeight: FontWeight.bold),),
-                subtitle: const Text('Location', style: TextStyle(fontSize:10, fontWeight: FontWeight.normal),),
-                trailing: IconButton(
-                  icon: const Icon(Icons.more_vert),
-                  onPressed: () {},
-                ),
-              ),
-              Divider(
-                color: Colors.black,
-                thickness: 0.2,
-              ),
-
-
-
-            ]
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+        children: [
+      Row(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('./lib/images/Nishchay.jpg'),
+              radius: 20,
+            ),
           ),
-        )
-    );
+          const Text(
+            'Nishchay',
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+          ),
+          const Spacer(),
+          IconButton(
+            icon: const Icon(Icons.more_horiz),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      Container(
+        child: Image.asset(
+          './lib/images/Nishchay.jpg',
+          fit: BoxFit.cover,
+        ),
+      ),
+      Row(
+        children: [
+          IconButton(
+            icon: const Icon(Icons.favorite_border),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.chat_bubble_outline),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.send),
+            onPressed: () {},
+          ),
+          const Spacer(),
+          IconButton(
+            icon: const Icon(Icons.bookmark_border),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      const Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+            child: Text('Liked by Nishchay and 100 others'),
+          ),
+          Spacer(),
+        ],
+      ),
+    ]);
   }
 }

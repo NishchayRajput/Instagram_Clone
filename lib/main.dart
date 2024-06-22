@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ig/Pages/login.dart';
+import 'package:ig/screens/login.dart';
 import 'package:ig/components/chattile.dart';
 import 'package:ig/components/homeAppBar.dart';
 import 'package:ig/components/post.dart';
+import 'package:ig/components/storytile.dart';
 import 'package:ig/components/storywidget.dart';
+import 'package:ig/screens/Feed.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,6 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return post();
+    return FeedUser();
   }
 }

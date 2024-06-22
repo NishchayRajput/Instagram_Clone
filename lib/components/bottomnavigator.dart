@@ -23,11 +23,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
           icon: IconButton(
               onPressed: () {
                 setState(() {
-                  activeSearch =activeHome;
-                  activePosts = activeHome;
-                  activeReels = activeHome;
-                  activeProfile = activeHome;
-                  activeHome = !activeHome;
+                  activeSearch =false;
+                  activePosts = false;
+                  activeReels = false;
+                  activeProfile = false;
+                  activeHome = true;
 
                 });
               },
@@ -43,11 +43,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             selectedIcon: Icon(Icons.search_outlined),
             onPressed: () {
               setState(() {
-                activeHome =activeSearch;
-                activeProfile =activeSearch;
-                activeReels =activeSearch;
-                activePosts =activeSearch;
-                activeSearch = !activeSearch;
+                activeHome =false;
+                activeProfile =false;
+                activeReels =false;
+                activePosts =false;
+                activeSearch = true;
               });
             },
           ),
@@ -60,11 +60,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             selectedIcon: Icon(Icons.add_box),
             onPressed: () {
               setState(() {
-                activeHome =activePosts;
-                activeProfile =activePosts;
-                activeReels =activePosts;
-                activeSearch =activePosts;
-                activePosts = !activePosts;
+                activeHome =false;
+                activeProfile =false;
+                activeReels =false;
+                activeSearch =false;
+                activePosts = true;
               });
             },
           ),
@@ -77,11 +77,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             selectedIcon: Icon(Icons.video_collection),
             onPressed: () {
               setState(() {
-                activeHome =activeReels;
-                activeProfile =activeReels;
-                activeSearch =activeReels;
-                activePosts =activeReels;
-                activeReels = !activeReels;
+                activeHome =false;
+                activeProfile =false;
+                activeSearch =false;
+                activePosts =false;
+                activeReels = true;
               });
             },
           ),
@@ -94,11 +94,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             selectedIcon: Icon(Icons.person),
             onPressed: () {
               setState(() {
-                activeHome =activeProfile;
-                activeReels =activeProfile;
-                activeSearch =activeProfile;
-                activePosts =activeProfile;
-                activeProfile = !activeProfile;
+                activeHome =false;
+                activeReels =false;
+                activeSearch =false;
+                activePosts =false;
+                activeProfile = true;
               });
             },
           ),
